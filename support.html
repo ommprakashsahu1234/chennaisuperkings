@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Super Kings</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<style>
+    /* From Uiverse.io by AqFox */
+    .custom-btn {
+        width: 130px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+            7px 7px 20px 0px rgba(0, 0, 0, .1),
+            4px 4px 5px 0px rgba(0, 0, 0, .1);
+        outline: none;
+        font-size: 15px;
+    }
+
+    .btn-2 {
+        background: #004dff;
+        background: linear-gradient(0deg, #004dff 0%, #004dff 100%);
+        border: none;
+        width: auto;
+    }
+
+    .btn-2:before {
+        height: 0%;
+        width: 2px;
+    }
+
+    .btn-2:hover {
+        box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+            -4px -4px 6px 0 rgba(116, 125, 136, .5),
+            inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+            inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+    }
+
+    /* From Uiverse.io by Yaya12085 */
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 350px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        position: relative;
+        margin: 0 auto; /* Center the form */
+    }
+
+    .title {
+        font-size: 28px;
+        color: royalblue;
+        font-weight: 600;
+        letter-spacing: -1px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
+
+    .title::before,
+    .title::after {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        left: 0px;
+        background-color: royalblue;
+    }
+
+    .title::before {
+        width: 18px;
+        height: 18px;
+        background-color: royalblue;
+    }
+
+    .title::after {
+        width: 18px;
+        height: 18px;
+        animation: pulse 1s linear infinite;
+    }
+
+    .message,
+    .signin {
+        color: rgba(211, 205, 205, 0.822);
+        font-size: 14px;
+    }
+
+    .signin {
+        text-align: center;
+    }
+
+    .signin a {
+        color: royalblue;
+    }
+
+    .signin a:hover {
+        text-decoration: underline royalblue;
+    }
+
+    .flex {
+        display: flex;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .form {
+        background-color: rgb(0, 0, 0);
+        width: 100vw;
+    }
+
+    .form label {
+        position: relative;
+        padding-right: 25px;
+    }
+
+    .form label .input {
+        width: 100%;
+        padding: 10px 10px 20px 10px;
+        outline: 0;
+        border: 1px solid rgba(212, 192, 192, 0.397);
+        border-radius: 10px;
+    }
+
+    .form label .input+span {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        color: grey;
+        font-size: 0.9em;
+        cursor: text;
+        transition: 0.3s ease;
+    }
+
+    .form label .input:placeholder-shown+span {
+        top: 15px;
+        font-size: 0.9em;
+    }
+
+    .form label .input:focus+span,
+    .form label .input:valid+span {
+        top: 30px;
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+
+    .form label .input:valid+span {
+        color: green;
+    }
+
+    .submit {
+        border: none;
+        outline: none;
+        background-color: royalblue;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 16px;
+        transform: .3s ease;
+    }
+
+    .submit:hover {
+        background-color: rgb(56, 90, 194);
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(0.9);
+            opacity: 1;
+        }
+
+        to {
+            transform: scale(1.8);
+            opacity: 0;
+        }
+    }
+
+    /* Center the .contacts div */
+    .contacts {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
+    
+</style>
+
+<body>
+
+    <header>
+        <span class="menu-btn" onclick="toggleNav()">&#9776; Menu</span>
+        <div class="header-content">
+            <h1>Chennai Super Kings</h1>
+            <img src="image/csk.png" class="logo" alt="CSK Logo">
+            <h1>/Support</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="formtag" align="center">
+            <form class="form">
+                <p class="title">Add Comment</p>
+                <p class="message">Your data will be sent to CSK Cloner</p>
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Name</span>
+                </label>
+
+                <label>
+                    <input required="" placeholder="" type="number" class="input">
+                    <span>Contact No: </span>
+                </label>
+
+                <label>
+                    <input required="" placeholder="" type="number" class="input">
+                    <span>Age</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="email" class="input">
+                    <span>Email</span>
+                </label>
+
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Comment</span>
+                </label>
+                
+                <button class="submit" onclick="alert('Submitted'); window.location.reload();">Submit</button>
+                
+            </form>
+        </div>
+
+        <div class="contacts">
+            <button class="custom-btn btn-2">
+                <a href="https://www.instagram.com/chennaiipl" target="_blank" style="text-decoration: none; color: inherit;">Instagram</a>
+            </button>
+            <button class="custom-btn btn-2">
+                <a href="https://x.com/ChennaiIPL" target="_blank" style="text-decoration: none; color: inherit;">Twitter</a>
+            </button>
+            <button class="custom-btn btn-2">
+                <a href="https://chennaisuperkings.com" target="_blank" style="text-decoration: none; color: inherit;">Official Website</a>
+            </button>
+            <button class="custom-btn btn-2">
+                <a href="mailto:opsommprakash+cskclonehelp@outlook.com" target="_blank" style="text-decoration: none; color: inherit;">Mail Us</a>
+            </button>
+        </div>
+        <div class="mncontent" align="center">
+            <h1>Chennai Super Kings Welcomes you....</h1>
+            <p style="font-size: 35px;">Start your journey with <i><b>#Whistlepodu</b></i></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chennai Super Kings Clone Maker. All rights reserved.</p>
+        </div>
+    </footer>
+    <nav id="sidebar">
+        <a href="#" onclick="hideNav()">Close &#10006;</a>
+        <a href="index.html">Home</a>
+        <a href="members.html">Players</a>
+        <a href="Gallery/">Gallery</a>
+        <a href="about.html">About</a>
+    </nav>
+</body>
+
+</html>
