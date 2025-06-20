@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSK Players Stats</title>
+    <link rel="stylesheet" href="style.css"><script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+}
+
+header, nav, .container {
+    flex: 0 0 auto;
+}
+
+.container {
+    flex: 1 0 auto;
+    padding: 20px;
+}
+
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 1rem;
+    background-color: yellow; /* Dark gray background */
+    color: white;
+    border-top: 1px solid #d1d5db; /* Light border at the top */
+}
+
+.heading {
+    color: white;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #e5e7eb; /* Light border */
+    text-align: center;
+}
+
+img {
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    td, th {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    img {
+        max-width: 50px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="menu-btn" onclick="toggleNav()">&#9776;</span>
+        <div class="header-content" style="margin-left: 50px;">
+            <h1>Chennai Super Kings</h1>
+            <img src="image/csk.png" class="logo" alt="CSK Logo">
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="sidebar">
+        <div class="container-fluid">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" onclick="hideNav()">Close &#10006;</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                        <a class="nav-link active" aria-current="page" href="playerstats.html">Player Stats</a>
+                        <a class="nav-link active" aria-current="page" href="polls.html">Polls</a>
+                        <a class="nav-link active" aria-current="page" href="notice.html">Notices</a>
+                        <a class="nav-link active" aria-current="page" href="members.html">Members</a>
+                        <a class="nav-link active" aria-current="page" href="./Gallery/index.html">Gallery</a>
+                        <a class="nav-link active" aria-current="page" href="support.html">Support</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4">
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr class="bg-blue-600 text-white">
+                        <th>Player</th>
+                        <th>Player Name</th>
+                        <th>Designation</th>
+                        <th>Balls Played</th>
+                        <th>Total Sixes</th>
+                        <th>Total Singles</th>
+                        <th>Total Wicket Lost</th>
+                        <th>Total Balls Bowled</th>
+                        <th>Average Runs</th>
+                        <th>Total Wickets Taken</th>
+                        <th>Total Fours</th>
+                        <th>Total Dots</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="./image/ms_m.png" alt="MS Dhoni" class="w-20 mx-auto"></td>
+                        <td>MS Dhoni</td>
+                        <td>Wicket Keeper</td>
+                        <td>3500</td>
+                        <td>250</td>
+                        <td>1200</td>
+                        <td>65</td>
+                        <td>0</td>
+                        <td>38.7</td>
+                        <td>50</td>
+                        <td>320</td>
+                        <td>950</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./image/rg_m.png" alt="Ruturaj Gaikwad" class="w-20 mx-auto"></td>
+                        <td>Ruturaj Gaikwad</td>
+                        <td>Batsman</td>
+                        <td>3200</td>
+                        <td>220</td>
+                        <td>1800</td>
+                        <td>60</td>
+                        <td>30</td>
+                        <td>46.3</td>
+                        <td>10</td>
+                        <td>350</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./image/sd_m.png" alt="Shivam Dube" class="w-20 mx-auto"></td>
+                        <td>Shivam Dube</td>
+                        <td>All-Rounder</td>
+                        <td>2700</td>
+                        <td>180</td>
+                        <td>2000</td>
+                        <td>45</td>
+                        <td>400</td>
+                        <td>42.8</td>
+                        <td>50</td>
+                        <td>450</td>
+                        <td>800</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./image/mp_m.png" alt="Maheesh Pathirana" class="w-20 mx-auto"></td>
+                        <td>Maheesh Pathirana</td>
+                        <td>Bowler</td>
+                        <td>1250</td>
+                        <td>25</td>
+                        <td>500</td>
+                        <td>15</td>
+                        <td>2100</td>
+                        <td>32.8</td>
+                        <td>98</td>
+                        <td>150</td>
+                        <td>750</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./image/rj_m.png" alt="Ravindra Jadeja" class="w-20 mx-auto"></td>
+                        <td>Ravindra Jadeja</td>
+                        <td>All-Rounder</td>
+                        <td>1260</td>
+                        <td>50</td>
+                        <td>510</td>
+                        <td>18</td>
+                        <td>2200</td>
+                        <td>35</td>
+                        <td>93</td>
+                        <td>149</td>
+                        <td>741</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 bg-600 text-black">
+        &copy; 2024 Chennai Super Kings Clone Maker. All rights reserved.
+    </footer>
+</body>
+
+</html>
